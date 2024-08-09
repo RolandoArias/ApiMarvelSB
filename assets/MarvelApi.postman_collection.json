@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "67d1e544-d556-4ca3-a19d-2f971eef7817",
+		"name": "MarvelApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "647329",
+		"_collection_link": "https://tgapp-dev.postman.co/workspace/TgApp~666af959-15d5-4643-baca-1b504767c63e/collection/647329-67d1e544-d556-4ca3-a19d-2f971eef7817?action=share&source=collection_link&creator=647329"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"rolando@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"fullName\":\"Rolando Arias\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/marvel/public/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"marvel",
+						"public",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"rolando@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/marvel/public/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"marvel",
+						"public",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2xhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTcyMzI0MjY3OSwiZXhwIjoxNzIzMjQ2Mjc5fQ.nvKoZ9qZLjRgbaV-1JBYxI8lBVhnFrPJFhSBbyubgkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\":\"15808\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/marvel/public/comics-api?id=15808",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"marvel",
+						"public",
+						"comics-api"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "15808"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searches",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2xhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTcyMzI0NDkwNSwiZXhwIjoxNzIzMjQ4NTA1fQ.ZQ_reM5YEYyndQmcWVa8YZfkhBhR5-hw4w-bTLVh2A8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\":\"15808\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/marvel/searches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"marvel",
+						"searches"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
